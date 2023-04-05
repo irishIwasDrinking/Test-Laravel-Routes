@@ -40,6 +40,7 @@ class RoutesTest extends TestCase
         $response = $this->get('/about');
 
         $response->assertViewIs('pages.about');
+        $response->content();
     }
 
     public function test_auth_middleware_is_working()
